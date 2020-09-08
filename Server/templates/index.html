@@ -27,6 +27,18 @@ $(function () {
 			var myChart = new Chart(ctx, {
 				type: 'bar',
 				data: data,
+				options: {
+					responsive: true,
+					scales: {
+					xAxes:[{
+							ticks:{
+								autoSkip: false,
+								maxRotation:90,
+								minRotation:90,
+							}
+						}],
+					}
+				}
 			});
 		});
 	}
