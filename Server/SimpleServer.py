@@ -54,7 +54,9 @@ def addData():
     jsonData = json.loads(request.json)
     print(jsonData)
 
-    # 同日時のデータがあれば更新、無ければ新規登録
+    # 既存データは一度削除する。
+    DataModel.delete().where(DataModel.city==jsonData["city"]).execute()
+    # 登録用データを構築
     v = DataModel(city=jsonData["city"],
                 now=jsonData["now"],
                 pre=jsonData["pre"],
