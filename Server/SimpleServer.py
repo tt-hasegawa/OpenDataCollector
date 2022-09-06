@@ -75,6 +75,14 @@ def index():
     # トップページを表示
     return render_template('index.html')
 
+@app.route('/table')
+def table():
+    # トップページを表示
+    data = DataModel.select().order_by(DataModel.city)
+    return render_template('table.html',data=data)
+
+
+
 ####################################################################
 
 # サービス起動

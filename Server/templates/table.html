@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<title>table</title>
+	</head>
+
+	<body>
+		<div>
+			<table class="table-striped">
+				<thead class="thead-dark">
+					<td>city</td>
+					<td>now</td>
+					<td>pre</td>
+					<td>area</td>
+					<td>dense</td>
+				</thead>
+				{% for row in data %}
+				<tr>
+					<td>{{row.city}}</td>
+					<td>{{row.now}}</td>
+					<td>{{row.pre}}</td>
+					<td>{{row.area}}</td>
+					<td>{{row.dense}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+
+	</body>
+
+</html>

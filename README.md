@@ -14,6 +14,7 @@
 # ソースのチェックアウト
 ```
 git clone https://github.com/tt-hasegawa/OpenDataCollector.git
+cd OpenDataCollector
 ```
 
 # テスト用Webサーバの起動
@@ -21,6 +22,7 @@ Serverフォルダにてコマンドプロンプト／シェルを開く
 
 以下のコマンドを実行して関連ライブラリをインストールする
 ```
+cd Server
 pip install -r requirements.txt
 ```
 以下のコマンドを実行し、Webサーバを起動する。
@@ -35,8 +37,11 @@ python SimpleServer.py
 
 # データ収集
 Clientフォルダにてコマンドプロンプト／シェルを開く
+
 以下のコマンドを実行して関連ライブラリをインストールする
+
 ```
+cd Client
 pip install -r requirements.txt
 ```
 
@@ -47,3 +52,5 @@ python DoCollect.py
 Webブラウザでhttp://localhost:3000
 を開いて、グラフにデータが表示されたらOK。
 
+同様にWebブラウザでhttp://localhost:3000/table
+を開いて、表形式でデータが表示されたらOK。
